@@ -1,3 +1,7 @@
+:root {
+   --transition: all 0.3s ease-in-out;
+}
+
 html {
    scroll-behavior: smooth;
 }
@@ -6,15 +10,19 @@ html {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+}
+
+body {
    font-family: 'Montserrat', sans-serif;
+   line-height: 1.5;
 }
 
 /* utility styles */
-
-.flex {
-   display: flex;
-   align-items: center;
-
+.width-container {
+   max-width: 1400px;
+   width: 100%;
+   margin: auto;
+   padding: 1rem;
 }
 
 .section-heading {
@@ -22,109 +30,121 @@ html {
    margin-bottom: 30px;
 }
 
-.width-container {
-   max-width: 1400px;
+.text-center {
+   text-align: center;
 }
 
-/* landing-section styles */
+.flex-row {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
 
-#landing-section {
-   height: 100vh;
-   padding: 0;
+.flex-box {
+   flex: 1 1 400px;
+   margin: 0 1.5rem;
+}
+
+.grid-row {
+   display: grid;
+   grid-gap: 2rem;
+   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Home styles */
+#home {
+   min-height: 100vh;
    color: #fff;
    background: linear-gradient(
       rgba(27,27,50, 0.6), 
       rgba(27,27,50, 0.9)
-   ),
-      url(../images/banner.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
+   ), url(../images/banner.jpg) no-repeat top/cover;
 }
 
 #nav {
+   background: #fff;
+   padding: 1rem;
+}
+
+.nav-container {
+   max-width: 1400px;
+   margin: auto;
+}
+
+.nav-header {
    display: flex;
-   justify-content: flex-end;
-   flex-wrap: nowrap;
-   padding: 10px 0;
-   text-transform: uppercase;
-   font-weight: 500;
-   font-size: 20px;
-   position: relative;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo {
+   color: #333;
+}
+
+.nav-toggle {
+   background: transparent;
+   width: 45px;
+   height: 45px;
+   border: none;
+   outline: none;
+   cursor: pointer;
+}
+
+.nav-links-container {
+   overflow: hidden;
+   height: 0;
+   transition: var(--transition);
 }
 
 .nav-link {
-   color: #fff;
-}
-
-.nav-link:hover {
-   color: rgb(49,245,206);
-}
-
-.hamburger {
-   color: #fff;
-   background-image: url(../images/hamburger-icon.svg);
-   width: 40px;
-   height: 40px;
-   border: 1px solid #fff;
-   border-radius: 5px;
-}
-
-.landing-container {
-   max-width: 1400px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   height: 100vh;
-}
-
-.heading {
+   display: block;
+   text-decoration: none;
+   padding: 1rem;
+   color: #333;
    font-weight: 700;
-   padding-bottom: 20px;
-   border-bottom: 2px solid #fff;
 }
 
-.landing-p {
-   font-weight: 500;
-   margin: 20px 0 30px;
-   text-transform: uppercase;
+.banner {
+   min-height: 100vh;
+   display: grid;
+   place-items: center;
+}
+
+.banner h1 {
+   font-size: 3rem;
+   padding-bottom: 1rem;
+   margin-bottom: 1rem;
+   border-bottom: 1px solid #fff;
+}
+
+.banner p {
+   font-size: 1.25rem;
+   margin-bottom: 1rem;
 }
 
 .social-links {
+   width: 260px;
    display: flex;
    justify-content: space-between;
-   width: 300px;
 }
 
-.social-links i {
-   text-align: center;
+.social-links a {
+   color: rgb(15,15,73);
+   background: #fff;
+   font-size: 24px;
    width: 50px;
    height: 50px;
-   padding: 13px;
-   font-size: 24px;
+   text-align: center;
+   padding: 8px 11px;
    border-radius: 50%;
-   color: rgb(15,15,73);
-   background-color: #fff;
 }
 
-.social-links :first-child :first-child {
-   padding: 13px 17px;
-}
-
-.social-links i:hover {
-   background-color: rgb(49,245,206);
-   transition: all 1s ease;
-   animation: scale 1s ease;
-}
 /* about-section styles */
 
-#about-section {
+#about{
    padding: 40px 0;
    text-align: center;
    color: rgb(15,15,73);
-}
-
-.about-container {
-   max-width: 1400px;
 }
 
 .profile-img {
@@ -136,20 +156,20 @@ html {
    margin-bottom: 40px;
 }
 
-#about-section p {
+#about p {
    font-size: 20px;
    margin-bottom: 50px;
    line-height: 2;
 }
 
-#about-section i {
+#about i {
    margin-bottom: 50px;
    color: rgb(26, 29, 53);
 }
 
 /* project styles */
 
-#projects-section {
+#projects {
    padding: 60px 0 40px;
    background-color: rgb(214, 216, 231);
    color: rgb(15,15,73);
@@ -157,7 +177,7 @@ html {
 
 .project {
    height: 300px;
-   max-width: 420px;
+   max-width: 600px;
    margin: 0 auto 50px auto;
    text-align: center;
    position: relative;
@@ -201,25 +221,25 @@ html {
 }
 
 #project-1 {
-   background: url(../images/project-1-thumbnail.jpg) no-repeat center;
+   background: url(../images/project-1-thumbnail.jpg) no-repeat center/cover;
 }
 
 #project-2 {
-   background: url(../images/project-2-thumbnail.jpg) no-repeat center;
+   background: url(../images/project-2-thumbnail.jpg) no-repeat center/cover;
 }
 
 #project-3 {
-   background: url(../images/project-3-thumbnail.jpg) no-repeat center;
+   background: url(../images/project-3-thumbnail.jpg) no-repeat center/cover;
 }
 
 #project-4 {
-   background: url(../images/project-4-thumbnail.jpg) no-repeat center;
+   background: url(../images/project-4-thumbnail.jpg) no-repeat center/cover;
 }
 #project-5 {
-   background: url(../images/project-5-thumbnail.jpg) no-repeat center;
+   background: url(../images/project-5-thumbnail.jpg) no-repeat center/cover;
 }
 #project-6 {
-   background: url(../images/project-6-thumbnail.jpg) no-repeat center;
+   background: url(../images/project-6-thumbnail.jpg) no-repeat center/cover;
 }
 
 /* footer styles */
@@ -228,6 +248,51 @@ html {
    color: #fff;
    padding: 40px 0 0;
    background-color: rgb(27,27,50);
+}
+
+#footer form {
+   width: 100%;
+}
+
+.form-group {
+   width: 100%;
+   margin-bottom: 1rem;
+}
+
+#footer form label,
+#footer form input,
+#footer form textarea {
+   display: block;
+   width: 100%;
+}
+
+#footer form label {
+   margin-bottom: 0.25rem;
+}
+
+#footer form input {
+   font-size: 1rem;
+}
+
+#footer form input,
+#footer form textarea {
+   padding: 0.5rem;
+}
+
+#footer .form-btn {
+   color: #fff;
+   background-color: #007bff;
+   font-size: 1rem;
+   padding: 0.75rem 1rem;
+   border: none;
+   border-radius: 5px;
+   outline: none;
+   cursor: pointer;
+   transition: var(--transition);
+}
+
+#footer .form-btn:hover {
+   background-color: #115ae0;
 }
 
 #footer p {

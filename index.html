@@ -3,8 +3,6 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- Bootstrap -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <!-- Font style -->
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,57 +13,63 @@
    <title>John Rudolph Lee | Personal Portfolio</title>
 </head>
 <body>
-   <div id="landing-section" class="jumbotron jumbotron-fluid">
-      <div class="container width-container">
-
-         <!-- bootstrap nav -->
-         <nav id="nav" class="navbar navbar-expand-lg">
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon hamburger"></span>
-            </button> -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item ">
-                  <a class="nav-link" href="#about-section">About Me</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#projects-section">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#footer">Contact</a>
-                </li>
-              </ul>
+   <header id="home">
+      <nav id="nav">
+         <div class="nav-container">
+            <div class="nav-header">
+               <h2 class="logo">Rudolph.Lee</h2>
+               <button class="nav-toggle">
+                  <i class="fas fa-bars fa-2x"></i>
+               </button>
             </div>
-          </nav>
+            <div class="nav-links-container">
+               <ul class="nav-links">
+                  <li>
+                     <a href="" class="nav-link scroll-link">Home</a>
+                  </li>
+                  <li>
+                     <a href="" class="nav-link scroll-link">About</a>
+                  </li>
+                  <li>
+                     <a href="" class="nav-link scroll-link">Projects</a>
+                  </li>
+                  <li>
+                     <a href="" class="nav-link scroll-link">Contact</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div class="banner">
+         <div class="width-container">
+            <h1>Hello, I'm John Rudolph Lee</h1>
+            <p>A Graphic Designer, an Aspiring Web Developer and a Life-long Learner.</p>
+            <div class="social-links">
+               <a href="https://www.facebook.com/johnrudolph.lee/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+               <a href="https://www.instagram.com/dolphius/" target="_blank"><i class="fab fa-instagram"></i></a>
+               <a href="https://www.linkedin.com/in/john-rudolph-lee-bb5114151/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+               <a href="https://github.com/dolphius21" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+         </div>
       </div>
-      <div class="container landing-container">
-         <h1 class="display-4 heading">Hello I'm, John Rudolph Lee</h1>
-         <p class="lead landing-p">A Graphic Designer, Aspiring Web Developer and a Lifelong Learner.</p>
-         <div class="social-links">
-            <a href="https://www.facebook.com/johnrudolph.lee/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/dolphius/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/john-rudolph-lee-bb5114151/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/dolphius21" target="_blank"><i class="fab fa-github"></i></a>
-         </div> 
-      </div>
-   </div>
-   <div id="about-section">
-      <div class="container width-container">
+   </header>
+   <div id="about">
+      <div class="width-container">
          <img class="profile-img" src="./assets/images/profile-img.jpg" alt="Profile image">
          <h2 class="section-heading text-center">About me</h2>
          <p>Hello you can call me Rudolph, I'm currenty a Graphic Designer who aspires to become a Web Developer. So far I am a newbie when it comes to coding. That's why I join Zuitt to further my knowledge in web development.</p>
-         <div class="row">
-            <div class="col-lg">
+         <div class="flex-row">
+            <div class="flex-box">
                <i class="fas fa-pen-nib fa-2x"></i>
                <h3>Graphic Illustration</h3>
                <p>I'm an expert when it comes to creating vector-based graphics.</p>
             </div>
-            <div class="col-lg">
+            <div class="flex-box">
                <i class="fas fa-bezier-curve fa-2x"></i>
                <h3>Motion Graphics</h3>
                <p>I animate graphics that can be used in your marketing ads.</p>
             </div>
-            <div class="col-lg">
+            <div class="flex-box">
                <i class="fas fa-code fa-2x"></i>
                <h3>Web Development</h3>
                <p>I know HTML and CSS and a little bit of JavaScript.</p>
@@ -73,46 +77,46 @@
          </div>
       </div>
    </div>
-   <div id="projects-section">
-      <div class="container width-container">
+   <div id="projects">
+      <div class="width-container">
          <h2 class="section-heading text-center">Projects</h2>
-         <div class="row">
-            <div class="col-lg-4 col-md-6">
+         <div class="flex-row">
+            <div class="flex-box">
                <div class="project" id="project-1">
                   <div class="project-info">
                      <a href="https://dolphius21.github.io/four-card-feature-section/" target="_blank">Four Card Feature Section</a>
                   </div>
                </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="flex-box">
                <div class="project" id="project-2">
                   <div class="project-info">
                      <a href="https://dolphius21.github.io/fylo-dark-theme-landing-page/" target="_blank">Fylo Landing Page</a>
                   </div>
                </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="flex-box">
                <div class="project" id="project-3">
                   <div class="project-info">
                      <a href="https://dolphius21.github.io/clipboard-landing-page/" target="_blank">Clipboard Landing Page</a>
                   </div>
                </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="flex-box">
                <div class="project" id="project-4">
                   <div class="project-info">
                      <a href="https://dolphius21.github.io/FAQ-Accordion-Card/" target="_blank">FAQ Accordion Component</a>
                   </div>
                </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="flex-box">
                <div class="project" id="project-5">
                   <div class="project-info">
                      <a href="https://dolphius21.github.io/to_do_list_app/" target="_blank">Todolist App</a>
                   </div>
                </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="flex-box">
                <div class="project" id="project-6">
                   <div class="project-info">
                      <a href="https://dolphius21.github.io/Beatmaker/" target="_blank">Beatmaker</a>
@@ -123,10 +127,10 @@
       </div>
    </div>
    <footer id="footer">
-      <div class="container width-container">
+      <div class="width-container">
          <h1>Contact Me</h1>
-         <div class="row">
-            <div class="col-lg-6">
+         <div class="grid-row">
+            <div>
                <form>
                   <div class="form-group">
                      <label for="name">Name</label>
@@ -140,16 +144,16 @@
                      <label for="message">Message</label>
                      <textarea class="form-control" id="message" rows="4"></textarea>
                    </div>
-                   <button type="submit" class="btn btn-primary">Submit</button>
+                   <button type="submit" class="form-btn">Submit</button>
                </form>
             </div>
-            <div class="col-lg-6">
-               <div class="map mt-4">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2296.2827269747354!2d121.04497743453291!3d14.549321369741465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8f01cc3fcd1%3A0x4bb852102a45c3ff!2sMarajo%20Tower%2C%20312%204th%20Ave%2C%20Taguig%2C%201434%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1608120330085!5m2!1sen!2sph" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div>
+               <div class="map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2296.2827269747354!2d121.04497743453291!3d14.549321369741465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8f01cc3fcd1%3A0x4bb852102a45c3ff!2sMarajo%20Tower%2C%20312%204th%20Ave%2C%20Taguig%2C%201434%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1608120330085!5m2!1sen!2sph" width="100%" height="330" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                </div>
             </div>
          </div>
-          <div class="social-links">
+         <div class="social-links">
             <a href="https://www.facebook.com/johnrudolph.lee/" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/dolphius/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/john-rudolph-lee-bb5114151/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
